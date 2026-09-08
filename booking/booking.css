@@ -1,0 +1,836 @@
+﻿/* =========================================
+   Trade Sphare / Yassin Portfolio
+   Booking Page Theme
+   Matches the main portfolio design
+========================================= */
+
+:root {
+  --bg: #0f1115;
+  --surface: #181a1f;
+  --surface-card: #1c1f26;
+  --surface-hover: #20232b;
+  --border: #292d36;
+  --border-light: #252932;
+
+  --text: #f3f3f3;
+  --muted: #bfc3ca;
+  --muted-dark: #888f99;
+
+  --primary: #00bcd4;
+  --primary-hover: #00a0b5;
+
+  --success: #22c55e;
+  --danger: #ef4444;
+
+  --shadow: 0 0 30px rgba(0, 188, 212, 0.06);
+  --radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  text-align: center;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+
+/* =========================================
+   Header
+========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(26, 28, 34, 0.95);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header-inner {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.brand:hover {
+  color: var(--primary);
+}
+
+.back-link {
+  color: var(--primary);
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: #fff;
+}
+
+
+/* =========================================
+   Booking Page
+========================================= */
+
+.booking-page {
+  padding: 75px 0 90px;
+}
+
+.booking-hero {
+  max-width: 800px;
+  margin: 0 auto 45px;
+}
+
+.eyebrow {
+  display: inline-block;
+
+  color: var(--primary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  margin-bottom: 10px;
+}
+
+.booking-hero h1 {
+  margin-bottom: 12px;
+
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+}
+
+.booking-hero p {
+  max-width: 720px;
+  margin: 0 auto;
+
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   Layout
+========================================= */
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+
+  gap: 24px;
+  align-items: start;
+}
+
+
+/* =========================================
+   Cards
+========================================= */
+
+.booking-card,
+.sidebar-card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+.booking-card {
+  padding: 32px;
+}
+
+.sidebar-card {
+  padding: 24px;
+}
+
+.booking-card:hover,
+.sidebar-card:hover {
+  border-color: #303640;
+}
+
+
+/* =========================================
+   Progress
+========================================= */
+
+.progress {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.progress-step {
+  position: relative;
+
+  color: var(--muted-dark);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding-bottom: 10px;
+
+  border-bottom: 2px solid var(--border);
+}
+
+.progress-step span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--muted-dark);
+
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.progress-step.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.progress-step.active span {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   Steps
+========================================= */
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+.step h2 {
+  margin-bottom: 5px;
+
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.step-description {
+  margin-bottom: 25px;
+
+  color: var(--muted);
+}
+
+
+/* =========================================
+   Services / Meeting Cards
+========================================= */
+
+.services-grid,
+.meeting-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.service-card,
+.choice-card {
+  position: relative;
+
+  display: block;
+
+  background: var(--surface-card);
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.service-card:hover,
+.choice-card:hover {
+  transform: translateY(-4px);
+
+  background: var(--surface-hover);
+  border-color: var(--primary);
+
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.08);
+}
+
+.service-card.selected,
+.choice-card:has(input:checked) {
+  background: #202b2f;
+
+  border-color: var(--primary);
+
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.08);
+}
+
+.service-card input,
+.choice-card input {
+  position: absolute;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.service-content,
+.choice-content {
+  display: block;
+
+  padding: 20px;
+
+  cursor: pointer;
+
+  text-align: right;
+}
+
+.service-content strong,
+.choice-content strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--text);
+
+  font-size: 1rem;
+}
+
+.service-card.selected .service-content strong,
+.choice-card:has(input:checked) .choice-content strong {
+  color: var(--primary);
+}
+
+.service-content small,
+.choice-content small {
+  color: var(--muted);
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================================
+   Forms
+========================================= */
+
+.calendar-fields,
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  text-align: right;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  color: var(--text);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  background: #1a1c22;
+  color: #fff;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #737983;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.08);
+}
+
+.field textarea {
+  min-height: 130px;
+
+  resize: vertical;
+}
+
+
+/* =========================================
+   Select
+========================================= */
+
+.field select {
+  appearance: auto;
+}
+
+
+/* =========================================
+   Messages
+========================================= */
+
+.info-message,
+.demo-notice,
+.form-message {
+  padding: 14px 16px;
+
+  margin-top: 18px;
+
+  border-radius: 8px;
+
+  background: var(--surface-card);
+
+  border: 1px solid var(--border);
+
+  color: var(--muted);
+
+  text-align: right;
+}
+
+.demo-notice {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  background: #20201b;
+
+  border-color: #45402a;
+
+  color: #d6bd75;
+}
+
+.form-message.success {
+  background: #15241b;
+
+  border-color: #245b38;
+
+  color: var(--success);
+}
+
+.form-message.error {
+  background: #28191a;
+
+  border-color: #633033;
+
+  color: var(--danger);
+}
+
+
+/* =========================================
+   Buttons
+========================================= */
+
+.step-actions {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.btn {
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 12px 22px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: var(--bg);
+}
+
+.btn.primary:hover {
+  background: var(--primary-hover);
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: #1c1f26;
+
+  color: var(--text);
+
+  border: 1px solid var(--border);
+}
+
+.btn.secondary:hover {
+  background: #20232b;
+
+  border-color: var(--primary);
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   Summary
+========================================= */
+
+.summary {
+  display: grid;
+
+  gap: 0;
+
+  background: var(--surface-card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  padding: 5px 18px;
+}
+
+.summary-row {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  text-align: right;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span {
+  color: var(--muted);
+}
+
+.summary-row strong {
+  color: var(--text);
+}
+
+
+/* =========================================
+   Sidebar
+========================================= */
+
+.booking-sidebar {
+  display: grid;
+
+  gap: 18px;
+}
+
+.sidebar-card h3 {
+  margin: 0 0 15px;
+
+  color: var(--text);
+
+  font-size: 1.1rem;
+}
+
+.sidebar-card ol,
+.sidebar-card ul {
+  margin: 0;
+
+  padding-right: 20px;
+
+  color: var(--muted);
+
+  text-align: right;
+}
+
+.sidebar-card li + li {
+  margin-top: 8px;
+}
+
+.sidebar-card li::marker {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   Calendar / Time Slots
+========================================= */
+
+.time-slots {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.time-slot {
+  padding: 11px 8px;
+
+  background: var(--surface-card);
+
+  color: var(--text);
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.time-slot:hover {
+  border-color: var(--primary);
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+.time-slot.selected {
+  background: var(--primary);
+
+  border-color: var(--primary);
+
+  color: var(--bg);
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   Footer
+========================================= */
+
+.site-footer {
+  background: #1a1c22;
+
+  border-top: 1px solid var(--border-light);
+
+  padding: 25px 20px;
+
+  color: var(--muted-dark);
+
+  font-size: 0.85rem;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   Links
+========================================= */
+
+.booking-card a,
+.sidebar-card a {
+  color: var(--primary);
+
+  text-decoration: none;
+}
+
+.booking-card a:hover,
+.sidebar-card a:hover {
+  color: #fff;
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 850px) {
+
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-sidebar {
+    order: -1;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-page {
+    padding-top: 60px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .container {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .header-inner {
+    min-height: 64px;
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+
+  .back-link {
+    font-size: 0.8rem;
+  }
+
+  .booking-page {
+    padding: 50px 0 65px;
+  }
+
+  .booking-hero {
+    margin-bottom: 30px;
+  }
+
+  .booking-hero h1 {
+    font-size: 2rem;
+  }
+
+  .booking-hero p {
+    font-size: 0.9rem;
+  }
+
+  .booking-card {
+    padding: 20px;
+  }
+
+  .services-grid,
+  .meeting-grid,
+  .calendar-fields,
+  .form-grid,
+  .booking-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .progress {
+    gap: 4px;
+
+    margin-bottom: 30px;
+  }
+
+  .progress-step {
+    font-size: 11px;
+
+    padding-bottom: 8px;
+  }
+
+  .progress-step span {
+    display: none;
+  }
+
+  .step h2 {
+    font-size: 1.4rem;
+  }
+
+  .step-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .time-slots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 380px) {
+
+  .booking-card {
+    padding: 16px;
+  }
+
+  .time-slots {
+    grid-template-columns: 1fr;
+  }
+
+  .service-content,
+  .choice-content {
+    padding: 16px;
+  }
+}

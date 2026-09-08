@@ -1,0 +1,10 @@
+﻿{
+  "siteName": "Yassin Hassan",
+  "bookingTitle": "احجز موعدا",
+  "bookingDescription": "اختر الخدمة والموعد المناسب لمناقشة مشروعك.",
+  "currency": "EUR",
+  "demoMode": true,
+  "telegramEnabled": false,
+  "storage": "localStorage",
+  "bookingPrefix": "TS"
+}

@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إلغاء الحجز | Yassin Hassan</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Yassin Hassan</a>
+    <a class="back-link" href="../index.html">الرئيسية</a>
+  </div>
+</header>
+
+<main class="container booking-page">
+
+  <section class="booking-card">
+    <div class="booking-hero">
+      <span class="eyebrow">Booking</span>
+      <h1>إلغاء الحجز</h1>
+      <p>يمكنك إلغاء آخر حجز تجريبي محفوظ في هذا المتصفح.</p>
+    </div>
+
+    <div id="booking-details" class="summary"></div>
+
+    <div class="step-actions">
+      <button class="btn secondary" id="cancel-booking">إلغاء الحجز</button>
+      <a class="btn primary" href="index.html">حجز موعد جديد</a>
+    </div>
+
+    <div id="message" class="form-message" hidden></div>
+  </section>
+
+</main>
+
+<script>
+const booking = JSON.parse(
+  localStorage.getItem("tradeSphareLastBooking") || "null"
+);
+
+const details = document.getElementById("booking-details");
+const button = document.getElementById("cancel-booking");
+const message = document.getElementById("message");
+
+if (!booking) {
+  details.innerHTML = "<p>لا يوجد حجز محفوظ.</p>";
+  button.disabled = true;
+} else {
+  details.innerHTML = `
+    <div class="summary-row">
+      <span>رقم الحجز</span>
+      <strong>${escapeHtml(booking.id)}</strong>
+    </div>
+    <div class="summary-row">
+      <span>الخدمة</span>
+      <strong>${escapeHtml(booking.serviceName)}</strong>
+    </div>
+    <div class="summary-row">
+      <span>التاريخ</span>
+      <strong>${escapeHtml(booking.date)}</strong>
+    </div>
+    <div class="summary-row">
+      <span>الوقت</span>
+      <strong>${escapeHtml(booking.time)}</strong>
+    </div>
+  `;
+}
+
+button.addEventListener("click", () => {
+  if (!booking) return;
+
+  const bookings = JSON.parse(
+    localStorage.getItem("tradeSphareBookings") || "[]"
+  );
+
+  const updated = bookings.map(item => {
+    if (item.id === booking.id) {
+      return {
+        ...item,
+        status: "cancelled",
+        cancelledAt: new Date().toISOString()
+      };
+    }
+
+    return item;
+  });
+
+  localStorage.setItem(
+    "tradeSphareBookings",
+    JSON.stringify(updated)
+  );
+
+  localStorage.removeItem("tradeSphareLastBooking");
+
+  message.hidden = false;
+  message.className = "form-message success";
+  message.textContent = "تم إلغاء الحجز التجريبي بنجاح.";
+
+  button.disabled = true;
+});
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+</script>
+
+</body>
+</html>
