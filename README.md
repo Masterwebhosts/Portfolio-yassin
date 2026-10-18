@@ -16,3 +16,6 @@ Internal anchors and local file references checked. Browser visual verification 
 
 Real estate platform for offices and brokers: https://sowlfa.online/
 Helps organize work, manage properties, and follow up with the team. Replaces the former Sowlfa Chat card. Chat Backend card removed.
+
+## Project discussion
+Project discussion buttons open an accessible Arabic dialog. The form prepares a WhatsApp message for either +963932224359 or +963984983589; the visitor sends it in WhatsApp. Both numbers also have direct tel links. No backend or API keys required.

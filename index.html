@@ -123,7 +123,7 @@
         SaaS platforms, AdTech systems, automation, and AI-powered applications.
       </p>
 
-      <div class="hero-actions"><a class="primary-button" href="#projects">Explore my work ↗</a><a class="secondary-button" href="mailto:info@tradesphare.com">Let’s talk</a></div><div class="links">
+      <div class="hero-actions"><a class="primary-button" href="#projects">Explore my work ↗</a><button class="secondary-button" type="button" data-project-dialog>Discuss a Project</button></div><div class="links">
 
         <a href="https://github.com/Masterwebhosts" target="_blank" rel="noopener noreferrer me"
           aria-label="Yassin Hassan on GitHub">
@@ -403,9 +403,7 @@
           AI Integrations
         </a>
 
-        <a href="mailto:info@tradesphare.com" class="btn" aria-label="Email Yassin Hassan about a project">
-          Discuss a Project
-        </a>
+        <button type="button" class="btn" data-project-dialog>Discuss a Project</button>
 
       </div>
 
@@ -429,9 +427,7 @@
 
       <div class="links"><a href="mailto:info@tradesphare.com">Email me ↗</a>
 
-        <a href="mailto:info@tradesphare.com" aria-label="Email Yassin Hassan about a project">
-          Discuss a Project
-        </a>
+        <button type="button" data-project-dialog>Discuss a Project</button>
 
         <a href="https://github.com/Masterwebhosts" target="_blank" rel="noopener noreferrer"
           aria-label="View Yassin Hassan's GitHub profile">
@@ -445,7 +441,7 @@
 
       </div>
 
-    </section>
+<div class="phone-links" aria-label="Call Yassin Hassan"><a href="tel:+963932224359">Call <bdi>+963 932 224 359</bdi></a><a href="tel:+963984983589">Call <bdi>+963 984 983 589</bdi></a></div>    </section>
 
 
   </main>
@@ -474,6 +470,65 @@
 
 
   </footer>
+
+
+<dialog id="project-dialog" aria-labelledby="project-dialog-title" lang="ar" dir="rtl">
+  <div class="dialog-header"><div><p class="section-kicker">لنتحدث عن فكرتك</p><h2 id="project-dialog-title">مناقشة المشروع</h2></div><button type="button" class="dialog-close" aria-label="إغلاق النموذج">×</button></div>
+  <p class="dialog-intro">اكتب تفاصيل مشروعك واختر رقم التواصل. ستفتح رسالة جاهزة في واتساب لتراجعها وترسلها.</p>
+  <form id="project-form">
+    <label for="project-name">الاسم <span aria-hidden="true">*</span></label>
+    <input id="project-name" name="name" autocomplete="name" maxlength="100" required>
+    <label for="project-type">نوع المشروع</label>
+    <select id="project-type" name="type"><option>موقع شركة</option><option>متجر إلكتروني</option><option>تطبيق ويب</option><option>تطوير أو صيانة موقع</option><option>مشروع آخر</option></select>
+    <label for="project-details">تفاصيل المشروع <span aria-hidden="true">*</span></label>
+    <textarea id="project-details" name="details" rows="4" minlength="10" maxlength="3000" required placeholder="الفكرة، الميزات المطلوبة، والمدة المتوقعة..."></textarea>
+    <label for="project-recipient">رقم واتساب</label>
+    <select id="project-recipient" name="recipient" dir="ltr"><option value="963932224359">+963 932 224 359</option><option value="963984983589">+963 984 983 589</option></select>
+    <p class="dialog-note">لا تُرسل البيانات حتى تضغط إرسال داخل واتساب.</p>
+    <button class="primary-button whatsapp-submit" type="submit">متابعة عبر واتساب ↗</button>
+  </form>
+  <div class="dialog-calls"><span>أو اتصل مباشرة</span><a href="tel:+963932224359" dir="ltr">+963 932 224 359</a><a href="tel:+963984983589" dir="ltr">+963 984 983 589</a></div>
+</dialog>
+<script>
+(() => {
+  const dialog = document.getElementById('project-dialog');
+  const form = document.getElementById('project-form');
+  let trigger;
+  document.querySelectorAll('[data-project-dialog]').forEach(button => {
+    button.addEventListener('click', () => {
+      trigger = button;
+      dialog.showModal();
+      document.body.classList.add('dialog-open');
+    });
+  });
+  dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('dialog-open');
+    if (trigger) trigger.focus();
+  });
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const name = form.elements.name.value.trim();
+    const details = form.elements.details.value.trim();
+    if (!name || details.length < 10) {
+      const field = !name ? form.elements.name : form.elements.details;
+      field.setCustomValidity('يرجى إدخال الاسم وتفاصيل لا تقل عن 10 أحرف.');
+      field.reportValidity();
+      return;
+    }
+    const recipient = form.elements.recipient.value;
+    if (!['963932224359', '963984983589'].includes(recipient)) return;
+    const message = ['مرحباً ياسين، أود مناقشة مشروع جديد.', '', 'الاسم: ' + name, 'نوع المشروع: ' + form.elements.type.value, '', 'تفاصيل المشروع:', details].join('\n');
+    window.open('https://wa.me/' + recipient + '?text=' + encodeURIComponent(message), '_blank', 'noopener,noreferrer');
+  });
+  form.addEventListener('input', event => event.target.setCustomValidity(''));
+})();
+</script>
 
 </body>
 
