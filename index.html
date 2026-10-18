@@ -56,13 +56,14 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- =========================
        Navigation
   ========================== -->
 
   <header>
-    <nav aria-label="Main navigation">
+    <nav aria-label="Main navigation"><a class="brand" href="#home"><span class="brand-mark">YH<span>.</span></span><span>Yassin Hassan</span></a>
 
 
       <ul>
@@ -95,18 +96,17 @@
 
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- =========================
      Hero
 ========================== -->
     <section class="hero" id="home" aria-labelledby="hero-title">
 
-      <img src="https://avatars.githubusercontent.com/u/108569349?v=4"
-        alt="Yassin Hassan — Founder and Full-Stack Developer" width="160" height="160" loading="eager" />
+<div class="hero-copy">
 
       <p class="eyebrow">
-        Founder · Full-Stack Developer · Software Engineer
+        INDEPENDENT DEVELOPER & FOUNDER
       </p>
 
       <h1 id="hero-title">
@@ -123,7 +123,7 @@
         SaaS platforms, AdTech systems, automation, and AI-powered applications.
       </p>
 
-      <div class="links">
+      <div class="hero-actions"><a class="primary-button" href="#projects">Explore my work ↗</a><a class="secondary-button" href="mailto:info@tradesphare.com">Let’s talk</a></div><div class="links">
 
         <a href="https://github.com/Masterwebhosts" target="_blank" rel="noopener noreferrer me"
           aria-label="Yassin Hassan on GitHub">
@@ -145,13 +145,14 @@
 
       </div>
 
-    </section>
+</div><div class="hero-visual"><img src="https://avatars.githubusercontent.com/u/108569349?v=4"
+        alt="Yassin Hassan — Founder and Full-Stack Developer" width="160" height="160" loading="eager" /><span class="visual-label">DEVELOPER / FOUNDER</span><div class="visual-caption"><span class="status-dot"></span> Ideas into real products</div></div>    </section>
 
 
     <!-- =========================
      About
 ========================== -->
-    <section class="about" id="about" aria-labelledby="about-title">
+    <section class="about" id="about" aria-labelledby="about-title"><p class="section-kicker">01 / ABOUT</p>
 
       <h2 id="about-title">
         About Me
@@ -188,7 +189,7 @@
     <!-- =========================
      Skills
 ========================== -->
-    <section class="skills" id="skills" aria-labelledby="skills-title">
+    <section class="skills" id="skills" aria-labelledby="skills-title"><p class="section-kicker">02 / TOOLKIT</p>
 
       <h2 id="skills-title">
         Technical Skills
@@ -222,10 +223,10 @@
     <!-- =========================
      Projects
 ========================== -->
-    <section class="projects" id="projects" aria-labelledby="projects-title">
+    <section class="projects" id="projects" aria-labelledby="projects-title"><p class="section-kicker">03 / SELECTED WORK</p>
 
       <h2 id="projects-title">
-        Featured Projects
+        Selected work
       </h2>
 
       <p>
@@ -233,11 +234,11 @@
         APIs, automation tools, and digital products I've worked on.
       </p>
 
-      <div class="scroll-container">
+      <div class="project-grid">
 
 
         <!-- Trade Sphare -->
-        <article class="card">
+        <article class="card"><div class="project-meta">01 / AdTech · Platform</div>
 
           <h3>
             Trade Sphare
@@ -252,13 +253,13 @@
           <a href="https://tradesphare.com/" target="_blank" rel="noopener noreferrer"
             aria-label="Visit Trade Sphare project">
             View Trade Sphare
-          </a>
+          </a><span class="project-destination">tradesphare.com</span>
 
         </article>
 
 
         <!-- Trade Sphare App -->
-        <article class="card">
+        <article class="card"><div class="project-meta">02 / PWA · Frontend</div>
 
           <h3>
             Trade Sphare App
@@ -274,17 +275,15 @@
           <a href="https://github.com/Masterwebhosts/trade-sphare-app" target="_blank" rel="noopener noreferrer"
             aria-label="View Trade Sphare App on GitHub">
             View Source on GitHub
-          </a>
+          </a><span class="project-destination">github.com/Masterwebhosts/trade-sphare-app</span>
 
         </article>
 
 
         <!-- Sham Ads -->
-        <article class="card">
+        <article class="card"><div class="project-meta">03 / Laravel · Backend</div>
 
-          <h3>
-            Sham-Ads
-          </h3>
+          <h3>Trade Sphare — Ad Platform</h3>
 
           <p>
             Laravel-based advertising platform supporting advertisers,
@@ -292,16 +291,16 @@
             financial operations, and advertising workflows.
           </p>
 
-          <a href="https://github.com/Masterwebhosts/Sham-Ads" target="_blank" rel="noopener noreferrer"
-            aria-label="View Sham-Ads on GitHub">
+          <a href="https://github.com/Masterwebhosts/Trade-Sphare" target="_blank" rel="noopener noreferrer"
+            aria-label="View Trade Sphare advertising platform on GitHub">
             View Source on GitHub
-          </a>
+          </a><span class="project-destination">github.com/Masterwebhosts/Trade-Sphare</span>
 
         </article>
 
 
         <!-- Sowlfa Chat -->
-        <article class="card">
+        <article class="card"><div class="project-meta">04 / AI · Communication</div>
 
           <h3>
             Sowlfa Chat
@@ -313,16 +312,13 @@
             and intelligent chat functionality.
           </p>
 
-          <a href="https://github.com/Masterwebhosts/Sowlfa-Chat" target="_blank" rel="noopener noreferrer"
-            aria-label="View Sowlfa Chat on GitHub">
-            View Source on GitHub
-          </a>
+          <span class="project-unavailable">Public link unavailable</span>
 
         </article>
 
 
         <!-- Lotto Grande -->
-        <article class="card">
+        <article class="card"><div class="project-meta">05 / PHP · Entertainment</div>
 
           <h3>
             Lotto Grande
@@ -333,16 +329,13 @@
             game modes and a connected Progressive Web App experience.
           </p>
 
-          <a href="https://github.com/Masterwebhosts/Lotto-Grande" target="_blank" rel="noopener noreferrer"
-            aria-label="View Lotto Grande on GitHub">
-            View Source on GitHub
-          </a>
+          <span class="project-unavailable">Public link unavailable</span>
 
         </article>
 
 
         <!-- Chat Backend -->
-        <article class="card">
+        <article class="card"><div class="project-meta">06 / API · Infrastructure</div>
 
           <h3>
             Chat Backend
@@ -354,16 +347,13 @@
             and application infrastructure.
           </p>
 
-          <a href="https://github.com/Masterwebhosts/chat-backend" target="_blank" rel="noopener noreferrer"
-            aria-label="View Chat Backend on GitHub">
-            View Source on GitHub
-          </a>
+          <span class="project-unavailable">Public link unavailable</span>
 
         </article>
 
 
         <!-- Telegram Bot -->
-        <article class="card">
+        <article class="card"><div class="project-meta">07 / Python · Automation</div>
 
           <h3>
             Telegram Bot
@@ -374,13 +364,20 @@
             interactive buttons, and custom bot functionality.
           </p>
 
-          <a href="https://github.com/Masterwebhosts/telegram-bot" target="_blank" rel="noopener noreferrer"
-            aria-label="View Telegram Bot on GitHub">
-            View Source on GitHub
-          </a>
+          <span class="project-unavailable">Public link unavailable</span>
 
         </article>
 
+
+
+        <!-- MallOutlets -->
+        <article class="card">
+          <div class="project-meta">08 / Business · Website</div>
+          <h3>MallOutlets</h3>
+          <p>A business website for MallOutlets, presenting the brand and its online presence.</p>
+          <a href="https://malloutlets.shop/" target="_blank" rel="noopener noreferrer" aria-label="Visit the MallOutlets website">Visit website ↗</a>
+          <span class="project-destination">malloutlets.shop</span>
+        </article>
 
       </div>
 
@@ -390,7 +387,7 @@
     <!-- =========================
      Services
 ========================== -->
-    <section class="actions" id="services" aria-labelledby="services-title">
+    <section class="actions" id="services" aria-labelledby="services-title"><p class="section-kicker">04 / SERVICES</p>
 
       <h2 id="services-title">
         What I Do
@@ -427,8 +424,8 @@
           AI Integrations
         </a>
 
-        <a href="booking/index.html" class="btn" aria-label="Book an appointment with Yassin Hassan">
-          Book an Appointment
+        <a href="mailto:info@tradesphare.com" class="btn" aria-label="Email Yassin Hassan about a project">
+          Discuss a Project
         </a>
 
       </div>
@@ -439,7 +436,7 @@
     <!-- =========================
      Contact
 ========================== -->
-    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><p class="section-kicker">05 / CONTACT</p>
 
       <h2 id="contact-title">
         Let's Work Together
@@ -451,10 +448,10 @@
         Get in touch and let's discuss the technical solution.
       </p>
 
-      <div class="links">
+      <div class="links"><a href="mailto:info@tradesphare.com">Email me ↗</a>
 
-        <a href="booking/index.html" aria-label="Book an appointment with Yassin Hassan">
-          Book an Appointment
+        <a href="mailto:info@tradesphare.com" aria-label="Email Yassin Hassan about a project">
+          Discuss a Project
         </a>
 
         <a href="https://github.com/Masterwebhosts" target="_blank" rel="noopener noreferrer"
