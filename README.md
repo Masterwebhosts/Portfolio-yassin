@@ -11,3 +11,8 @@ Static portfolio. Upload index.html and style.css together to the website root.
 
 ## Validation
 Internal anchors and local file references checked. Browser visual verification was unavailable.
+
+## SOWLFA
+
+Real estate platform for offices and brokers: https://sowlfa.online/
+Helps organize work, manage properties, and follow up with the team. Replaces the former Sowlfa Chat card. Chat Backend card removed.
