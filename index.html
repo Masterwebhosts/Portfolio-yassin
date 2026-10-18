@@ -43,7 +43,7 @@
 
   <!-- Styles -->
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261019-2" />
 
   <!-- Google Fonts -->
 
@@ -53,6 +53,35 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
+<style id="project-dialog-styles">
+/* Project discussion and phone contact */
+button,input,select,textarea{font:inherit}
+button{cursor:pointer;color:inherit}
+button.secondary-button{background:transparent}
+button[data-project-dialog]:focus-visible,dialog button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.contact-section .links button{background:none;border:0;border-bottom:1px solid #6f845a;padding:0 0 7px;color:var(--accent);font-size:12px}
+.phone-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px}
+.phone-links a{border:1px solid var(--line);border-radius:7px;padding:10px 16px;font-size:13px}
+body.dialog-open{overflow:hidden}
+#project-dialog{margin:auto;width:min(560px,calc(100% - 28px));max-height:90dvh;overflow:auto;border:1px solid #52634b;border-radius:18px;padding:28px;background:var(--surface);color:var(--text)}
+#project-dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(5px)}
+.dialog-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.dialog-header .section-kicker{letter-spacing:0;margin-bottom:6px;font-size:12px}
+.dialog-header h2{font-size:27px;line-height:1.5}
+.dialog-close{background:transparent;border:1px solid var(--line);width:44px;height:44px;flex-shrink:0;border-radius:8px;font-size:27px;line-height:1}
+.dialog-intro,.dialog-note{font-size:13px;color:var(--muted);margin:14px 0}
+#project-form{display:flex;flex-direction:column;gap:9px}
+#project-form label{font-size:13px;margin-top:7px}
+#project-form input,#project-form select,#project-form textarea{width:100%;min-width:0;background:var(--bg);color:var(--text);border:1px solid #53604f;padding:11px 12px;border-radius:7px}
+#project-form textarea{resize:vertical}
+#project-form input:focus,#project-form select:focus,#project-form textarea:focus{outline:2px solid var(--accent);outline-offset:2px}
+.whatsapp-submit{width:100%;min-height:48px}
+.dialog-calls{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:12px;border-top:1px solid var(--line);padding-top:18px;margin-top:22px}
+.dialog-calls span{width:100%;color:var(--muted)}
+.dialog-calls a{color:var(--accent)}
+@media(max-width:600px){#project-dialog{padding:20px}.phone-links{flex-direction:column;align-items:flex-start}}
+
+</style>
 </head>
 
 <body>
