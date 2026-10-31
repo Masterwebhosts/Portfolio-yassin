@@ -1,99 +1,570 @@
-﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Demo | Yassin Hassan</title>
-  <link rel="stylesheet" href="admin.css">
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+    content="Yassin Hassan — Founder and Full-Stack Developer specializing in PHP, Laravel, MySQL, JavaScript, REST APIs, SaaS, AdTech, automation, and AI-powered web applications." />
+
+  <meta name="keywords"
+    content="Yassin Hassan, Full-Stack Developer, PHP Developer, Laravel Developer, Web Developer, SaaS, AdTech, REST API, MySQL, JavaScript, AI Integration" />
+
+  <meta name="author" content="Yassin Hassan" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <meta name="theme-color" content="#111827" />
+
+  <link rel="canonical" href="https://masterwebhosts.github.io/Portfolio-yassin/" />
+
+  <title>
+    Yassin Hassan | Founder & Full-Stack Developer
+  </title>
+
+  <!-- Open Graph -->
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yassin Hassan | Founder & Full-Stack Developer" />
+  <meta property="og:description"
+    content="Founder and Full-Stack Developer building scalable web platforms, SaaS products, AdTech systems, APIs, automation tools, and AI-powered applications." />
+  <meta property="og:url" content="https://masterwebhosts.github.io/Portfolio-yassin/" />
+  <meta property="og:site_name" content="Yassin Hassan" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://masterwebhosts.github.io/Portfolio-yassin/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="ياسين حسن — مهندس برمجيات ومتخصص في التجارة الإلكترونية" />
+
+  <!-- Twitter / X -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yassin Hassan | Founder & Full-Stack Developer" />
+  <meta name="twitter:description"
+    content="Founder and Full-Stack Developer specializing in PHP, Laravel, SaaS, AdTech, APIs, automation, and AI integrations." />
+
+  <meta name="twitter:image" content="https://masterwebhosts.github.io/Portfolio-yassin/og-image.png" />
+  <meta name="twitter:image:alt" content="ياسين حسن — مهندس برمجيات ومتخصص في التجارة الإلكترونية" />
+
+  <!-- Styles -->
+
+  <link rel="stylesheet" href="style.css?v=20261019-2" />
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+<style id="project-dialog-styles">
+/* Project discussion and phone contact */
+button,input,select,textarea{font:inherit}
+button{cursor:pointer;color:inherit}
+button.secondary-button{background:transparent}
+button[data-project-dialog]:focus-visible,dialog button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.contact-section .links button{background:none;border:0;border-bottom:1px solid #6f845a;padding:0 0 7px;color:var(--accent);font-size:12px}
+.phone-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px}
+.phone-links a{border:1px solid var(--line);border-radius:7px;padding:10px 16px;font-size:13px}
+body.dialog-open{overflow:hidden}
+#project-dialog{margin:auto;width:min(560px,calc(100% - 28px));max-height:90dvh;overflow:auto;border:1px solid #52634b;border-radius:18px;padding:28px;background:var(--surface);color:var(--text)}
+#project-dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(5px)}
+.dialog-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.dialog-header .section-kicker{letter-spacing:0;margin-bottom:6px;font-size:12px}
+.dialog-header h2{font-size:27px;line-height:1.5}
+.dialog-close{background:transparent;border:1px solid var(--line);width:44px;height:44px;flex-shrink:0;border-radius:8px;font-size:27px;line-height:1}
+.dialog-intro,.dialog-note{font-size:13px;color:var(--muted);margin:14px 0}
+#project-form{display:flex;flex-direction:column;gap:9px}
+#project-form label{font-size:13px;margin-top:7px}
+#project-form input,#project-form select,#project-form textarea{width:100%;min-width:0;background:var(--bg);color:var(--text);border:1px solid #53604f;padding:11px 12px;border-radius:7px}
+#project-form textarea{resize:vertical}
+#project-form input:focus,#project-form select:focus,#project-form textarea:focus{outline:2px solid var(--accent);outline-offset:2px}
+.whatsapp-submit{width:100%;min-height:48px}
+.dialog-calls{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:12px;border-top:1px solid var(--line);padding-top:18px;margin-top:22px}
+.dialog-calls span{width:100%;color:var(--muted)}
+.dialog-calls a{color:var(--accent)}
+@media(max-width:600px){#project-dialog{padding:20px}.phone-links{flex-direction:column;align-items:flex-start}}
+
+</style>
 </head>
+
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<header class="admin-header">
-  <div class="container header-inner">
-    <div>
-      <strong>Yassin Hassan</strong>
-      <span>Booking Admin Demo</span>
-    </div>
+  <!-- =========================
+       Navigation
+  ========================== -->
 
-    <a href="../index.html">الموقع الرئيسي</a>
-  </div>
-</header>
+  <header>
+    <nav aria-label="Main navigation"><a class="brand" href="#home"><span class="brand-mark">YH<span>.</span></span><span>Yassin Hassan</span></a>
 
-<main class="container admin-page">
 
-  <section class="page-heading">
-    <div>
-      <span class="eyebrow">ADMIN DEMO</span>
-      <h1>لوحة إدارة الحجوزات</h1>
-      <p>لوحة تجريبية تعمل باستخدام LocalStorage فقط.</p>
-    </div>
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
 
-    <button class="btn danger" id="clear-all">حذف جميع الحجوزات</button>
-  </section>
+        <li>
+          <a href="#about">About</a>
+        </li>
 
-  <section class="stats-grid">
-    <div class="stat-card">
-      <span>كل الحجوزات</span>
-      <strong id="stat-total">0</strong>
-    </div>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
 
-    <div class="stat-card">
-      <span>قيد الانتظار</span>
-      <strong id="stat-pending">0</strong>
-    </div>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
 
-    <div class="stat-card">
-      <span>مؤكدة</span>
-      <strong id="stat-confirmed">0</strong>
-    </div>
+        <li>
+          <a href="#services">Services</a>
+        </li>
 
-    <div class="stat-card">
-      <span>ملغاة</span>
-      <strong id="stat-cancelled">0</strong>
-    </div>
-  </section>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
 
-  <section class="panel">
-    <div class="panel-header">
-      <h2>الحجوزات</h2>
+    </nav>
 
-      <div class="filters">
-        <select id="status-filter">
-          <option value="">كل الحالات</option>
-          <option value="pending">قيد الانتظار</option>
-          <option value="confirmed">مؤكد</option>
-          <option value="completed">مكتمل</option>
-          <option value="cancelled">ملغى</option>
-        </select>
+  </header>
 
-        <input type="date" id="date-filter">
+  <main id="main-content">
+
+    <!-- =========================
+     Hero
+========================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+
+<div class="hero-copy">
+
+      <p class="eyebrow">
+        INDEPENDENT DEVELOPER & FOUNDER
+      </p>
+
+      <h1 id="hero-title">
+        Yassin Hassan
+      </h1>
+
+      <h2>
+        Building scalable web platforms, digital products, and intelligent applications
+      </h2>
+
+      <p>
+        I build complete web products from idea to production,
+        with a focus on PHP, Laravel, MySQL, JavaScript, REST APIs,
+        SaaS platforms, AdTech systems, automation, and AI-powered applications.
+      </p>
+
+      <div class="hero-actions"><a class="primary-button" href="#projects">Explore my work ↗</a><button class="secondary-button" type="button" data-project-dialog>Discuss a Project</button></div><div class="links">
+
+        <a href="https://github.com/Masterwebhosts" target="_blank" rel="noopener noreferrer me"
+          aria-label="Yassin Hassan on GitHub">
+          GitHub
+        </a>
+
+        <a href="mailto:info@tradesphare.com" aria-label="Send an email to Yassin Hassan">
+          Email
+        </a>
+
+        <a href="https://tradesphare.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Trade Sphare">
+          Trade Sphare
+        </a>
+
+        <a href="https://www.linkedin.com/in/ayassoftwer/" target="_blank" rel="noopener noreferrer me"
+          aria-label="Yassin Hassan on LinkedIn">
+          LinkedIn
+        </a>
+
       </div>
-    </div>
 
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>رقم الحجز</th>
-            <th>العميل</th>
-            <th>الخدمة</th>
-            <th>الموعد</th>
-            <th>الحالة</th>
-            <th>الإجراءات</th>
-          </tr>
-        </thead>
+</div><div class="hero-visual"><img src="https://avatars.githubusercontent.com/u/108569349?v=4"
+        alt="Yassin Hassan — Founder and Full-Stack Developer" width="160" height="160" loading="eager" /><span class="visual-label">DEVELOPER / FOUNDER</span><div class="visual-caption"><span class="status-dot"></span> Ideas into real products</div></div>    </section>
 
-        <tbody id="bookings-table"></tbody>
-      </table>
-    </div>
 
-    <div id="empty-state" class="empty-state" hidden>
-      لا توجد حجوزات مطابقة.
-    </div>
-  </section>
+    <!-- =========================
+     About
+========================== -->
+    <section class="about" id="about" aria-labelledby="about-title"><p class="section-kicker">01 / ABOUT</p>
 
-</main>
+      <h2 id="about-title">
+        About Me
+      </h2>
 
-<script src="admin.js"></script>
+      <p>
+        I'm Yassin Hassan, a Founder and Full-Stack Developer
+        focused on designing, developing, and launching complete
+        digital products from the ground up.
+      </p>
+
+      <p>
+        My experience covers backend architecture, frontend development,
+        database design, REST APIs, authentication, business logic,
+        analytics, integrations, automation, and production deployment.
+      </p>
+
+      <p>
+        I enjoy transforming ideas into practical software products
+        and building systems that are scalable, maintainable,
+        secure, and focused on solving real business problems.
+      </p>
+
+      <p>
+        My work also includes developing digital platforms and products
+        through <strong>Trade Sphare</strong>, with a particular interest
+        in SaaS, AdTech, digital marketplaces, WordPress solutions,
+        and intelligent web applications.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+     Skills
+========================== -->
+    <section class="skills" id="skills" aria-labelledby="skills-title"><p class="section-kicker">02 / TOOLKIT</p>
+
+      <h2 id="skills-title">
+        Technical Skills
+      </h2>
+
+      <div class="skills-list">
+
+        <span>PHP</span>
+        <span>Laravel</span>
+        <span>MySQL</span>
+        <span>JavaScript</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Tailwind CSS</span>
+        <span>REST APIs</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Database Design</span>
+        <span>Authentication</span>
+        <span>SaaS Development</span>
+        <span>AdTech</span>
+        <span>Automation</span>
+        <span>AI Integrations</span>
+        <span>OpenAI API</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+     Projects
+========================== -->
+    <section class="projects" id="projects" aria-labelledby="projects-title"><p class="section-kicker">03 / SELECTED WORK</p>
+
+      <h2 id="projects-title">
+        Selected work
+      </h2>
+
+      <p>
+        A selection of web platforms, software systems,
+        APIs, automation tools, and digital products I've worked on.
+      </p>
+
+      <div class="project-grid">
+<article class="card">
+<div class="project-meta">Real Estate · Business Platform</div>
+<h3>SOWLFA — Real Estate Platform</h3>
+<p lang="ar" dir="rtl">منصة عقارية للمكاتب والوسطاء. إدارة أسهل، تعاون أفضل. تساعد SOWLFA المكاتب والوسطاء العقاريين على تنظيم أعمالهم، وإدارة العقارات، ومتابعة الفريق من خلال منصة واحدة واضحة وسهلة الاستخدام.</p>
+<a href="https://sowlfa.online/" target="_blank" rel="noopener noreferrer" aria-label="Visit the SOWLFA real estate platform">Visit SOWLFA ↗</a>
+<span class="project-destination">sowlfa.online</span>
+</article>
+
+
+        <!-- Trade Sphare -->
+        <article class="card"><div class="project-meta">01 / AdTech · Platform</div>
+
+          <h3>
+            Trade Sphare
+          </h3>
+
+          <p>
+            A digital platform focused on advertising technology,
+            digital products, services, campaigns, publishers,
+            analytics, monetization, and online business solutions.
+          </p>
+
+          <a href="https://tradesphare.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="Visit Trade Sphare project">
+            View Trade Sphare
+          </a><span class="project-destination">tradesphare.com</span>
+
+        </article>
+
+
+        <!-- Trade Sphare App -->
+        <article class="card"><div class="project-meta">02 / PWA · Frontend</div>
+
+          <h3>
+            Trade Sphare App
+          </h3>
+
+          <p>
+            A modern Progressive Web App for the Trade Sphare platform,
+            featuring a responsive interface, offline support,
+            service worker integration, and a lightweight frontend
+            built with HTML, CSS, and JavaScript.
+          </p>
+
+          <a href="https://github.com/Masterwebhosts/trade-sphare-app" target="_blank" rel="noopener noreferrer"
+            aria-label="View Trade Sphare App on GitHub">
+            View Source on GitHub
+          </a><span class="project-destination">github.com/Masterwebhosts/trade-sphare-app</span>
+
+        </article>
+
+
+        <!-- Sham Ads -->
+        <article class="card"><div class="project-meta">03 / Laravel · Backend</div>
+
+          <h3>Trade Sphare — Ad Platform</h3>
+
+          <p>
+            Laravel-based advertising platform supporting advertisers,
+            publishers, campaign management, tracking,
+            financial operations, and advertising workflows.
+          </p>
+
+          <a href="https://github.com/Masterwebhosts/Trade-Sphare" target="_blank" rel="noopener noreferrer"
+            aria-label="View Trade Sphare advertising platform on GitHub">
+            View Source on GitHub
+          </a><span class="project-destination">github.com/Masterwebhosts/Trade-Sphare</span>
+
+        </article>
+
+
+        
+        
+
+
+        <!-- Lotto Grande -->
+        <article class="card"><div class="project-meta">05 / PHP · Entertainment</div>
+
+          <h3>
+            Lotto Grande
+          </h3>
+
+          <p>
+            PHP-based entertainment platform featuring multiple
+            game modes and a connected Progressive Web App experience.
+          </p>
+
+          <span class="project-unavailable">Public link unavailable</span>
+
+        </article>
+
+
+        
+        
+
+
+        <!-- Telegram Bot -->
+        <article class="card"><div class="project-meta">07 / Python · Automation</div>
+
+          <h3>
+            Telegram Bot
+          </h3>
+
+          <p>
+            Python-based Telegram bot featuring automated responses,
+            interactive buttons, and custom bot functionality.
+          </p>
+
+          <span class="project-unavailable">Public link unavailable</span>
+
+        </article>
+
+
+
+        <!-- MallOutlets -->
+        <article class="card">
+          <div class="project-meta">08 / Business · Website</div>
+          <h3>MallOutlets</h3>
+          <p>A business website for MallOutlets, presenting the brand and its online presence.</p>
+          <a href="https://malloutlets.shop/" target="_blank" rel="noopener noreferrer" aria-label="Visit the MallOutlets website">Visit website ↗</a>
+          <span class="project-destination">malloutlets.shop</span>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+     Services
+========================== -->
+    <section class="actions" id="services" aria-labelledby="services-title"><p class="section-kicker">04 / SERVICES</p>
+
+      <h2 id="services-title">
+        What I Do
+      </h2>
+
+      <p>
+        I help turn technical ideas and business requirements
+        into reliable digital products and production-ready systems.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#contact" class="btn" aria-label="Contact me about full-stack development">
+          Full-Stack Development
+        </a>
+
+        <a href="#contact" class="btn" aria-label="Contact me about Laravel and PHP development">
+          Laravel & PHP Development
+        </a>
+
+        <a href="#contact" class="btn" aria-label="Contact me about API development">
+          REST API Development
+        </a>
+
+        <a href="#contact" class="btn" aria-label="Contact me about SaaS platforms">
+          SaaS & Web Platforms
+        </a>
+
+        <a href="#contact" class="btn" aria-label="Contact me about AdTech development">
+          AdTech Solutions
+        </a>
+
+        <a href="#contact" class="btn" aria-label="Contact me about AI integrations">
+          AI Integrations
+        </a>
+
+        <button type="button" class="btn" data-project-dialog>Discuss a Project</button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+     Contact
+========================== -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><p class="section-kicker">05 / CONTACT</p>
+
+      <h2 id="contact-title">
+        Let's Work Together
+      </h2>
+
+      <p>
+        Have a project idea, a business challenge,
+        or a digital product you want to build?
+        Get in touch and let's discuss the technical solution.
+      </p>
+
+      <div class="links"><a href="mailto:info@tradesphare.com">Email me ↗</a>
+
+        <button type="button" data-project-dialog>Discuss a Project</button>
+
+        <a href="https://github.com/Masterwebhosts" target="_blank" rel="noopener noreferrer"
+          aria-label="View Yassin Hassan's GitHub profile">
+          GitHub Profile
+        </a>
+
+        <a href="https://www.linkedin.com/in/ayassoftwer/" target="_blank" rel="noopener noreferrer"
+          aria-label="View Yassin Hassan's LinkedIn profile">
+          LinkedIn Profile
+        </a>
+
+      </div>
+
+<div class="phone-links" aria-label="Call Yassin Hassan"><a href="tel:+963932224359">Call <bdi>+963 932 224 359</bdi></a><a href="tel:+963984983589">Call <bdi>+963 984 983 589</bdi></a></div>    </section>
+
+
+  </main>
+
+  <!-- =========================
+       Footer
+  ========================== -->
+
+  <footer>
+
+
+    <p>
+      © 2026 Yassin Hassan. All rights reserved.
+    </p>
+
+    <p>
+      <a href="https://github.com/Masterwebhosts/Portfolio-yassin" target="_blank" rel="noopener noreferrer"
+        aria-label="View the portfolio source code on GitHub">
+        Portfolio Source Code
+      </a>
+    </p>
+
+    <p>
+      Built with HTML and CSS.
+    </p>
+
+
+  </footer>
+
+
+<dialog id="project-dialog" aria-labelledby="project-dialog-title" lang="ar" dir="rtl">
+  <div class="dialog-header"><div><p class="section-kicker">لنتحدث عن فكرتك</p><h2 id="project-dialog-title">مناقشة المشروع</h2></div><button type="button" class="dialog-close" aria-label="إغلاق النموذج">×</button></div>
+  <p class="dialog-intro">اكتب تفاصيل مشروعك واختر رقم التواصل. ستفتح رسالة جاهزة في واتساب لتراجعها وترسلها.</p>
+  <form id="project-form">
+    <label for="project-name">الاسم <span aria-hidden="true">*</span></label>
+    <input id="project-name" name="name" autocomplete="name" maxlength="100" required>
+    <label for="project-type">نوع المشروع</label>
+    <select id="project-type" name="type"><option>موقع شركة</option><option>متجر إلكتروني</option><option>تطبيق ويب</option><option>تطوير أو صيانة موقع</option><option>مشروع آخر</option></select>
+    <label for="project-details">تفاصيل المشروع <span aria-hidden="true">*</span></label>
+    <textarea id="project-details" name="details" rows="4" minlength="10" maxlength="3000" required placeholder="الفكرة، الميزات المطلوبة، والمدة المتوقعة..."></textarea>
+    <label for="project-recipient">رقم واتساب</label>
+    <select id="project-recipient" name="recipient" dir="ltr"><option value="963932224359">+963 932 224 359</option><option value="963984983589">+963 984 983 589</option></select>
+    <p class="dialog-note">لا تُرسل البيانات حتى تضغط إرسال داخل واتساب.</p>
+    <button class="primary-button whatsapp-submit" type="submit">متابعة عبر واتساب ↗</button>
+  </form>
+  <div class="dialog-calls"><span>أو اتصل مباشرة</span><a href="tel:+963932224359" dir="ltr">+963 932 224 359</a><a href="tel:+963984983589" dir="ltr">+963 984 983 589</a></div>
+</dialog>
+<script>
+(() => {
+  const dialog = document.getElementById('project-dialog');
+  const form = document.getElementById('project-form');
+  let trigger;
+  document.querySelectorAll('[data-project-dialog]').forEach(button => {
+    button.addEventListener('click', () => {
+      trigger = button;
+      dialog.showModal();
+      document.body.classList.add('dialog-open');
+    });
+  });
+  dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('dialog-open');
+    if (trigger) trigger.focus();
+  });
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const name = form.elements.name.value.trim();
+    const details = form.elements.details.value.trim();
+    if (!name || details.length < 10) {
+      const field = !name ? form.elements.name : form.elements.details;
+      field.setCustomValidity('يرجى إدخال الاسم وتفاصيل لا تقل عن 10 أحرف.');
+      field.reportValidity();
+      return;
+    }
+    const recipient = form.elements.recipient.value;
+    if (!['963932224359', '963984983589'].includes(recipient)) return;
+    const message = ['مرحباً ياسين، أود مناقشة مشروع جديد.', '', 'الاسم: ' + name, 'نوع المشروع: ' + form.elements.type.value, '', 'تفاصيل المشروع:', details].join('\n');
+    window.open('https://wa.me/' + recipient + '?text=' + encodeURIComponent(message), '_blank', 'noopener,noreferrer');
+  });
+  form.addEventListener('input', event => event.target.setCustomValidity(''));
+})();
+</script>
+
 </body>
+
 </html>
